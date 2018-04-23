@@ -1,0 +1,52 @@
+public class Lesson2Task1 {
+    public static void main(String args[])
+    {
+        Long l1 = 360L;
+        Long l2 = -900L;
+        if ( l1 % 2 == 0 ) {
+            System.out.println(l1+l2);
+        }
+        if ( l2 % 2 == 0 ) {
+            System.out.println(l1-l2);
+        }
+        if ( l1 > 0 ) {
+            System.out.println(l1*l2);
+        }
+        if ( l2 > 0 ) {
+            System.out.println(l1/l2);
+        }
+    }
+}
+
+public class Lesson2Task2 {
+    public static void main(String args[])
+    {
+        int t = 63;
+        int sum = 0;
+        for (int i = 0; i <= t; i++) {
+            if (i % 2 != 0) {
+                System.out.println(i);
+            } else {
+                sum = sum + i;
+            }
+        }
+        System.out.println("Сумма всех четных от 0 до " + t + " = " + sum);
+    }
+}
+
+public class Lesson2Task3 {
+    public static void main(String args[])
+    {
+        int arrayInt [] = {4, 40, -2, 14, 234, 50, 0, 5, 101, 2, 700};
+        int indexMax=0;
+        for (int i = 0; i < 9; i++) {
+            if (arrayInt[i+1]>arrayInt[indexMax]) {
+                indexMax = i+1;
+            }
+            if (arrayInt[i] > 100 ) {
+                break;
+            }
+        }
+        System.out.println("Индекс максимального элемента: " + indexMax);
+    }
+}
