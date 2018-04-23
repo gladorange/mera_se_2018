@@ -10,9 +10,9 @@ public class Author extends Person{
         super(firstName, lastName, birthYear);
     }
 
-    public void AddBook(Book book)
+    public void addBook(Book book)
     {
-        if (books.indexOf(books) == -1)
+        if (books.contains(books))
         {
             return; // already in list
         }

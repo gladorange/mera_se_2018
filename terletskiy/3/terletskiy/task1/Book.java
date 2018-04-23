@@ -19,7 +19,7 @@ public class Book {
         this.year = year;
         this.author = author;
         this.pages = pages;
-        this.author.AddBook(this);
+        this.author.addBook(this);
         allPagesCounter += pages;
     }
 
