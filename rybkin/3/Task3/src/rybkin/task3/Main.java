@@ -12,9 +12,15 @@ public class Main {
         Books book4 = new Books("Один", 4444, author2, 60);
         Books book5 = new Books("Один", 5555, author3, 70);
         Books book6 = new Books("Один", 6666, author3, 80);
-        System.out.println("У автора " + author1.getFirstName() + " общее кол-во страниц = " + author1.pageForAuthor());
-        System.out.println("У автора " + author2.getFirstName() + " общее кол-во страниц = " + author2.pageForAuthor());
-        System.out.println("У автора " + author3.getFirstName() + " общее кол-во страниц = " + author3.pageForAuthor());
+        author1.setBooks(new Books[]{book1, book2});
+        author2.setBooks(new Books[]{book3, book4});
+        author3.setBooks(new Books[]{book5, book6});
+        System.out.println("У автора " + author1.getFirstName() + " " + author1.getSecondName() + " общее кол-во страниц = " + author1.pageForAuthor());
+        System.out.println("У автора " + author2.getFirstName() + " " + author2.getSecondName() + " общее кол-во страниц = " + author2.pageForAuthor());
+        System.out.println("У автора " + author3.getFirstName() + " " + author3.getSecondName() + " общее кол-во страниц = " + author3.pageForAuthor());
+        System.out.println( "Общее количество страниц " + author1.pageForAuthor() + author2.pageForAuthor() + author3.pageForAuthor());
+
+
     }
 
 

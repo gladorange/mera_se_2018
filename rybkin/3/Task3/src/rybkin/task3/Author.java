@@ -6,7 +6,6 @@ public class Author extends Person {
 
     public Author(String firstName, String secondName, Integer yearOfBirth, String country) {
         super(firstName, secondName, yearOfBirth, country);
-        books = new Books[]{};
     }
 
     public Books[] getBooks() {
@@ -18,7 +17,7 @@ public class Author extends Person {
     }
 
     public int pageForAuthor() {
-        int k=0;
+        int k = 0;
         for (Books book : books) {
             k += book.getNumberOfPages();
         }
