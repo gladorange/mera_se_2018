@@ -6,6 +6,13 @@ public class Person {
     private Integer yearOfBirth = 0;
     private String country = "none";
 
+    public Person(String firstName, String secondName, Integer yearOfBirth, String country) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.yearOfBirth = yearOfBirth;
+        this.country = country;
+    }
+
     public String getSecondName() {
         return secondName;
     }
