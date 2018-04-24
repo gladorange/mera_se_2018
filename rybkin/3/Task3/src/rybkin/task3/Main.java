@@ -12,6 +12,7 @@ public class Main {
         Books book4 = new Books("Четыре", 4444, author2, 60);
         Books book5 = new Books("Пять", 5555, author3, 70);
         Books book6 = new Books("Шесть", 6666, author3, 80);
+
         author1.setBooks(new Books[]{book1, book2});
         author2.setBooks(new Books[]{book3, book4});
         author3.setBooks(new Books[]{book5, book6});
