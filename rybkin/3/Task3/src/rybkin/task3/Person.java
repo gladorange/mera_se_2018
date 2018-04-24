@@ -5,6 +5,15 @@ public class Person {
     private String secondName = "none";
     private Integer yearOfBirth = 0;
     private String country = "none";
+    static int personCount;
+
+    public Person () {
+        personCount++;
+    }
+
+    public static int getPersonCount() {
+        return personCount;
+    }
 
     public Person(String firstName, String secondName, Integer yearOfBirth, String country) {
         this.firstName = firstName;
