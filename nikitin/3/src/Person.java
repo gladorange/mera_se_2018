@@ -11,8 +11,9 @@ public abstract class Person {
     private String country;
     private static int counter = 0;
 
-    Person(String firstName, String secondName, Date birthday, String country) {
-        this.firstName  = firstName;
+
+    public Person(String firstName, String secondName, Date birthday, String country) {
+        this.firstName = firstName;
         this.secondName = secondName;
         this.birthday   = birthday;
         this.country    = country;
@@ -23,12 +24,16 @@ public abstract class Person {
         System.out.println("Total persons: " + counter);
     }
 
-    public void printBio() {
-        DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+    public void printInfo() {
+        System.out.println(String.format("%s %s", this.firstName, this.secondName));
 
-        System.out.println(String.format("Autor: %s %s", this.firstName, this.secondName));
-        System.out.println("\tBirthday: " + sdf.format(this.birthday));
-        System.out.println("\tCountry: " + this.country);
+        if (this.birthday != null) {
+            DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+            System.out.println(String.format("\tBorn at %s", sdf.format(this.birthday)));
+        }
+        if (this.country != null) {
+            System.out.println(String.format("\tCountry: %s", this.country));
+        }
     }
 
     public String getFirstName() {
