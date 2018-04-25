@@ -1,10 +1,6 @@
-package telukhin;
+package telukhin.task1;
 
-import telukhin.task1.Artist;
-import telukhin.task1.Person;
-import telukhin.task1.Style;
-
-public class Main {
+public class MainClass {
     public static void main(String[] args) {
         Artist artist = new Artist("Иван", "Айвазовский", 1817, Style.ROMANTISM);
         Person person = new Person("Вася", "Пупкин", 1995);
