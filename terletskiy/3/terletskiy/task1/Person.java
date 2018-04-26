@@ -36,6 +36,11 @@ public class Person
         return birthYear;
     }
 
+    // выводит информацию о человека в формате (ФИ родился в таком-то году)
+    public void printInfo(){
+        System.out.println(String.format("%S %S родился в %d году", firstName, lastName, birthYear));
+    }
+
     @Override
     public String toString() {
         return firstName + ' '  + lastName;
