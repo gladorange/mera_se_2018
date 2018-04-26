@@ -1,4 +1,4 @@
-package rybkin.task3;
+package rybkin.task4;
 
 public class Main {
 
@@ -25,9 +25,6 @@ public class Main {
         }
         System.out.println("Общее количество страниц " + k);
 
-        for (int i = 0; i < 10; i++) {
-            Person person = new Person();
-        }
         System.out.println(Person.getPersonCount());
     }
 
