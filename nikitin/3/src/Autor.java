@@ -8,7 +8,7 @@ public class Autor extends Person {
     private ArrayList<Book> books = new ArrayList<>();
     private int totalPages = 0;
 
-    Autor(String firstName, String secondName, Date birthday, String country) {
+    public Autor(String firstName, String secondName, Date birthday, String country) {
         super(firstName, secondName, birthday, country);
     }
 
@@ -19,11 +19,6 @@ public class Autor extends Person {
         }
         System.out.println("\t\tTotal books: " + this.books.size());
         System.out.println("\t\tTotal pages: " + this.totalPages);
-    }
-
-    @Override
-    public void printBio() {
-        super.printBio();
     }
 
     private Book getBook(String title){

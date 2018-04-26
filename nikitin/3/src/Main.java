@@ -4,8 +4,13 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        Artist vincent = new Artist("Vincent", "Van Gogh", Artist.Style.STYLE_POSTIMPRESSIONISM);
+        vincent.printInfo();
+
+
+        /*
         Autor jesus = new Autor("Jesus", "Christ", new Date(), "Judea, Roman Empire");
-        jesus.printBio();
+        jesus.printInfo();
         jesus.writeBook("Holy F*cking Bible", 666);
         jesus.printBooks();
 
@@ -26,6 +31,7 @@ public class Main {
 
         Person.printCounter();
         Book.printTotalPages();
+        */
     }
 
 }
