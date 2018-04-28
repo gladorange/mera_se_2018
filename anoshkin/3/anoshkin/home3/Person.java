@@ -55,4 +55,9 @@ public class Person {
     public String toString() {
         return this.name + " " + this.surname;
     }
+
+    public void printInfo(){
+        String out = getName() + " " + getSurname() + " родился в " + getBirthDate() + " году.";
+        System.out.println(out);
+    }
 }
