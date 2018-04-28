@@ -1,39 +1,34 @@
 package src;
 
+import java.util.Collections;
+
 public class Park {
-    Car[] cars = new Car[2];
-    Ship[] ships = new Ship[2];
+    Vehicle[] vehicles = new Vehicle[4];
 
     public static void main(String[] args) {
         Park p = new Park();
 
-        p.cars[0] = new Motorbike("Moscow", 1);
-        p.cars[1] = new Truck("Riga", 50, 10);
+        p.vehicles[0] = new Motorbike("Moscow", 1);
+        p.vehicles[1] = new Truck("Riga", 50, 10);
+        p.vehicles[2] = new Barge("Murmansk", 1000);
+        p.vehicles[3] = new Yacht("Simferopol");
 
-        p.ships[0] = new Barge("Murmansk", 1000);
-        p.ships[1] = new Yacht("Simferopol");
-
-        for(Car car : p.cars) {
-            if (car instanceof Motorbike) {
-                car.moveTo("Amsterdam");
+        for(Vehicle v : p.vehicles) {
+            if (v instanceof Motorbike) {
+                v.moveTo("Amsterdam");
             }
-
-            if (car instanceof Truck) {
-                ((Truck) car).loadCargo("Kokainum");
-                car.moveTo("Nalchik");
-                car.moveTo("Tambov");
+            if (v instanceof Truck) {
+                ((Truck) v).loadCargo("Kokainum");
+                v.moveTo("Nalchik");
+                v.moveTo("Tambov");
             }
-        }
-
-        for(Ship ship : p.ships) {
-            if (ship instanceof Barge) {
-                ((Barge) ship).loadCargo("oil");
-                ship.moveTo("Vladivostok");
-                ship.moveTo("Nalchik");
+            if (v instanceof Barge) {
+                ((Barge) v).loadCargo("oil");
+                v.moveTo("Vladivostok");
+                v.moveTo("Nalchik");
             }
-
-            if (ship instanceof Yacht) {
-                ship.moveTo("Sochi");
+            if (v instanceof Yacht) {
+                v.moveTo("Sochi");
             }
         }
     }

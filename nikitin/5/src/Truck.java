@@ -1,6 +1,6 @@
 package src;
 
-public class Truck extends CargoCar implements CargoVehicle {
+public class Truck extends CargoCar {
 
     public Truck(String location, int maxWeight, int consumption) {
         this.currentLocation = location;

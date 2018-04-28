@@ -1,6 +1,6 @@
 package src;
 
-public class Barge extends CargoShip implements CargoVehicle {
+public class Barge extends CargoShip {
 
     public Barge(String location, int maxWeight) {
         this.currentLocation = location;
