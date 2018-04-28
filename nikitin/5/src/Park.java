@@ -1,6 +1,5 @@
 package src;
 
-import java.util.Collections;
 
 public class Park {
     Vehicle[] vehicles = new Vehicle[4];
