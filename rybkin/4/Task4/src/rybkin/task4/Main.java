@@ -26,7 +26,8 @@ public class Main {
         System.out.println("Общее количество страниц " + k);
 
         System.out.println(Person.getPersonCount());
+
+        System.out.println(Painter.Style.CUBISM);
+
     }
-
-
 }

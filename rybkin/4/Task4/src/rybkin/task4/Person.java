@@ -52,4 +52,8 @@ public class Person {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public void printInfo (){
+        System.out.println(this.firstName + this.secondName + "родился" + "в" + this.yearOfBirth);
+    }
 }
