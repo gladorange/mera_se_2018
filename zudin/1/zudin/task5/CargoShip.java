@@ -10,4 +10,16 @@ public abstract class CargoShip extends Ship implements CargoVehicle {
 
     }
 
+    @Override
+    public void moveTo(String newLocation) {
+        System.out.printf("Плыву из %s в %s. \n", curretnLocation, newLocation);
+        curretnLocation = newLocation;
+        if (cargo != null) {
+            System.out.printf("Доставил %s в %s", cargo, curretnLocation);
+            cargo = null;
+
+        }
+
+    }
+
 }
