@@ -3,8 +3,8 @@ package src;
 public class Worker extends Person {
     private Manager manager;
 
-    public class NullManagerExeption extends CompanyException {
-        public NullManagerExeption(String info) {
+    public class NullManagerException extends CompanyException {
+        public NullManagerException(String info) {
             super(info);
         }
     }
@@ -13,18 +13,10 @@ public class Worker extends Person {
         super(name, secondName, fatherName);
 
         if (manager == null) {
-            throw new NullManagerExeption(
+            throw new NullManagerException(
                     String.format("Cannot add an employee \"%s %s %s\" with empty manager",
                             secondName, name, fatherName));
         }
-        this.manager = manager;
-    }
-
-    public Manager getManager() {
-        return manager;
-    }
-
-    public void setManager(Manager manager) {
         this.manager = manager;
     }
 }
