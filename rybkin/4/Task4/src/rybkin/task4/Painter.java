@@ -11,7 +11,7 @@ public class Painter extends Person {
     private Style generalStyle = Style.MAIN_S;
 
     public Painter (String firstName, String secondName){
-        this(firstName, secondName, 1980, "Russia", generalStyle);
+        this(firstName, secondName, 1980, "Russia", Style.MAIN_S);
     }
     public Painter (String firstName, Style generalStyle) {
         this(firstName, "Петров", 1980, "Russia", generalStyle);
