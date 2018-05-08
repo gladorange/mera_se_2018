@@ -9,4 +9,16 @@ public abstract class CargoCar extends Car implements CargoVehicle {
         super(curretnLocation);
 
     }
+
+    @Override
+    public void moveTo(String newLocation) {
+        System.out.printf("Еду из %s в %s. \n", curretnLocation, newLocation);
+        curretnLocation = newLocation;
+        if (cargo != null) {
+            System.out.printf("Доставил %s в %s. \n", cargo, curretnLocation);
+            cargo = null;
+
+        }
+
+    }
 }
