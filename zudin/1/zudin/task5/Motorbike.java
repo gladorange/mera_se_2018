@@ -1,19 +1,12 @@
 package zudin.task5;
 
-public class Motorbike implements Vehicle {
+public class Motorbike extends Car {
 
     protected String curretnLocation;
 
     Motorbike(String curretnLocation) {
+        super(curretnLocation);
         this.curretnLocation = curretnLocation;
-    }
-
-    @Override
-    public void moveTo(String newLocation) {
-
-        System.out.printf("Еду из %s в %s. \n", curretnLocation, newLocation);
-        curretnLocation = newLocation;
-
     }
 
 }
