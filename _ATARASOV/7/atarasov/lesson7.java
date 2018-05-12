@@ -9,6 +9,14 @@ public class lesson7 {
     static class Box <TYPE> {
         TYPE item;
 
+        public Box(Class<TYPE> clazz) {
+            try {
+                this.item = clazz.newInstance();
+            } catch (InstantiationException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        }
+
         public TYPE getItem() {
             return item;
         }
@@ -30,8 +38,9 @@ public class lesson7 {
     }
 
     public static void main(String[] args) {
-        Box<Person> b = new Box<>();
-        b.setItem(new Person(1990));
+        Box<Person> b = new Box<Person>(Person.class);
+        System.out.println(b.getItem());
+        b.getItem().getCountry();
         String original = "123";
         String clone = b.clone(original);
         Integer original2 = 512;
@@ -41,7 +50,7 @@ public class lesson7 {
         System.out.println(clone2 == original2);
         System.out.println(clone == original);
 
-        Box<Number> mBox = new Box<>();
+        Box<Number> mBox = new Box<>(Number.class);
         mBox.setItem(new Integer(2));
         Number item = mBox.getItem();
 
