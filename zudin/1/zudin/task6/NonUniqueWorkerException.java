@@ -1,10 +1,10 @@
 package zudin.task6;
 
 
-public class NonUniqueWorker extends Exception {
+public class NonUniqueWorkerException extends Exception {
     private String info;
 
-    public NonUniqueWorker (String info){
+    public NonUniqueWorkerException(String info) {
         this.info = info;
     }
 
