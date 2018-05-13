@@ -13,6 +13,20 @@ public abstract class Person {
         this.secondName = secondName;
         this.lastName = lastName;
         this.fio = this.firstName + " " + this.secondName + " " + this.lastName;
+        }
+
+     @Override
+    public boolean equals(Object o) {
+
+        Person otherPerson = (Person) o;
+        return this.fio.equals(otherPerson.fio);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 31;
+        hash = hash * 17 + fio.hashCode();
+        return hash;
     }
 
 }
