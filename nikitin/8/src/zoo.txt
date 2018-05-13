@@ -1,0 +1,4 @@
+Cat Barsik 4
+Cat Vasya 2
+Dog Barbos loud
+Zebra Marty 42
