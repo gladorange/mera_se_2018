@@ -9,7 +9,7 @@ public class Barge extends CargoShip{
     private String cargo;
 
     public Barge(String currentLocation) {
-        super(currentLocation);
+        this.currentLocation = currentLocation;
     }
 
     @Override

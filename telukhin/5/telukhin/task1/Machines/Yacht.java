@@ -6,7 +6,7 @@ public class Yacht extends Ship {
     private String currentLocation;
 
     public Yacht(String currentLocation) {
-        super(currentLocation);
+        this.currentLocation = currentLocation;
     }
 
     @Override

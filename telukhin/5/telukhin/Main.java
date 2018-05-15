@@ -21,6 +21,7 @@ public class Main {
         for (Vehicle v : vechicles) {
             v.moveTo("Москва");
         }
+
         System.out.println();
 
         for (Vehicle v : vechicles) {
@@ -29,7 +30,6 @@ public class Main {
                 ((CargoVehicle) v).loadCargo("Гвозди");
                 v.moveTo("Москва");
             }
-
         }
 
     }
