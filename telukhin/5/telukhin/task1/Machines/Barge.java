@@ -3,13 +3,13 @@ package telukhin.task1.Machines;
 import telukhin.task1.Abstract.CargoShip;
 import telukhin.task1.Interfaces.CargoVehicle;
 
-public class Barge extends CargoShip implements CargoVehicle {
+public class Barge extends CargoShip{
 
     private String currentLocation;
     private String cargo;
 
     public Barge(String currentLocation) {
-        this.currentLocation = currentLocation;
+        super(currentLocation);
     }
 
     @Override
