@@ -11,20 +11,20 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Vehicle> vechicles = new ArrayList<Vehicle>();
-        vechicles.add(new Barge("Новосибирск"));
-        vechicles.add(new Motorbike("Екатеринбург"));
-        vechicles.add(new Truck("Владивосток"));
-        vechicles.add(new Yacht("Омск"));
+        ArrayList<Vehicle> vechicles = new ArrayList<>();
+
+        vechicles.add(new Motorbike("Самара"));
+        vechicles.add(new Truck("Ростов"));
+        vechicles.add(new Yacht("Владимир"));
+        vechicles.add(new Barge("Новгород"));
 
         for (Vehicle v : vechicles) {
             v.moveTo("Москва");
         }
-        System.out.println();
 
         for (Vehicle v : vechicles) {
-            if (v instanceof CargoVehicle){
-                v.moveTo("Самара");
+            if (v instanceof CargoVehicle) {
+                v.moveTo("Саратов");
                 ((CargoVehicle) v).loadCargo("Гвозди");
                 v.moveTo("Москва");
             }

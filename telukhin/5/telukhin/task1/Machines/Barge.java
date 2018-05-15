@@ -1,21 +1,22 @@
 package telukhin.task1.Machines;
 
 import telukhin.task1.Abstract.CargoShip;
+import telukhin.task1.Interfaces.CargoVehicle;
 
-public class Barge extends CargoShip {
+public class Barge extends CargoShip implements CargoVehicle {
 
+    private String currentLocation;
+    private String cargo;
 
     public Barge(String currentLocation) {
-        super(currentLocation);
-        draft = 100;
+        this.currentLocation = currentLocation;
     }
 
     @Override
     public void moveTo(String newLocation) {
-        System.out.println(String.format("Грузовое судно. Плыву из %s в %s ", currentLocation, newLocation));
-        currentLocation = newLocation;
-        if(cargo != null){
-            System.out.printf("Доставил %s в %s", cargo, currentLocation);
+        System.out.println(String.format("Баржа. Плыву из %s в %s", currentLocation, newLocation));
+        currentLocation = newLocation;if (cargo != null) {
+            System.out.println(String.format("Доставил %s в %s", cargo, newLocation));
             cargo = null;
         }
     }
@@ -27,6 +28,6 @@ public class Barge extends CargoShip {
 
     @Override
     public int getMaxWeight() {
-        return draft;
+        return 0;
     }
 }

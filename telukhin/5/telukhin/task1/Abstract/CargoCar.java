@@ -1,5 +1,7 @@
 package telukhin.task1.Abstract;
 
-public abstract class CargoCar extends Car{
-    protected int maxCarCarrying;
+import telukhin.task1.Interfaces.CargoVehicle;
+
+public abstract class CargoCar extends Car {
+    int carrying;
 }

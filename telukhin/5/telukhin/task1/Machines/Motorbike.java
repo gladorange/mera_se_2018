@@ -4,7 +4,6 @@ import telukhin.task1.Abstract.Car;
 import telukhin.task1.Interfaces.Vehicle;
 
 public class Motorbike implements Vehicle {
-
     private String currentLocation;
 
     public Motorbike(String currentLocation) {
@@ -13,7 +12,7 @@ public class Motorbike implements Vehicle {
 
     @Override
     public void moveTo(String newLocation) {
-        System.out.println(String.format("Еду из %s в %s ", currentLocation, newLocation));
+        System.out.println(String.format("Мотоцикл. Eду из %s в %s ", currentLocation, newLocation));
         currentLocation = newLocation;
     }
 }

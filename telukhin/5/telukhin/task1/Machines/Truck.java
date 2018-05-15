@@ -1,25 +1,13 @@
 package telukhin.task1.Machines;
 
-import telukhin.task1.Abstract.CargoCar;
 import telukhin.task1.Interfaces.CargoVehicle;
 
 public class Truck implements CargoVehicle {
     private String currentLocation;
     private String cargo;
-    private int carrying;
 
     public Truck(String currentLocation) {
         this.currentLocation = currentLocation;
-    }
-
-    @Override
-    public void moveTo(String newLocation) {
-        System.out.println(String.format("Грузовой автомобиль. Еду из %s в %s ", currentLocation, newLocation));
-        currentLocation = newLocation;
-        if(cargo != null){
-            System.out.printf("Доставил %s в %s", cargo, currentLocation);
-            cargo = null;
-        }
     }
 
     @Override
@@ -31,4 +19,15 @@ public class Truck implements CargoVehicle {
     public int getMaxWeight() {
         return 0;
     }
+
+    @Override
+    public void moveTo(String newLocation) {
+        System.out.println(String.format("Грузовик. Eду из %s в %s ", currentLocation, newLocation));
+        currentLocation = newLocation;
+        if (cargo != null) {
+            System.out.println(String.format("Доставил %s в %s", cargo, newLocation));
+            cargo = null;
+        }
+    }
 }
+
