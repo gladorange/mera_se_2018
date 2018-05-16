@@ -12,7 +12,7 @@ public abstract class Ship implements Vehicle {
 
     @Override
     public void moveTo(String newLocation) {
-        System.out.println(String.format("Яхта. Плыву из %s в %s", currentLocation, newLocation));
+        System.out.println(String.format("Пассажирский корабль. Плыву из %s в %s", currentLocation, newLocation));
         currentLocation = newLocation;
     }
 }
