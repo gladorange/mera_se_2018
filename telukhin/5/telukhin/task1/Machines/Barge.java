@@ -5,11 +5,10 @@ import telukhin.task1.Interfaces.CargoVehicle;
 
 public class Barge extends CargoShip{
 
-    private String currentLocation;
     private String cargo;
 
     public Barge(String currentLocation) {
-        this.currentLocation = currentLocation;
+        super(currentLocation);
     }
 
     @Override
