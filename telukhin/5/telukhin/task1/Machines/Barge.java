@@ -5,7 +5,6 @@ import telukhin.task1.Interfaces.CargoVehicle;
 
 public class Barge extends CargoShip{
 
-    private String cargo;
 
     public Barge(String currentLocation) {
         super(currentLocation);
@@ -13,16 +12,12 @@ public class Barge extends CargoShip{
 
     @Override
     public void moveTo(String newLocation) {
-        System.out.println(String.format("Баржа. Плыву из %s в %s", currentLocation, newLocation));
-        currentLocation = newLocation;if (cargo != null) {
-            System.out.println(String.format("Доставил %s в %s", cargo, newLocation));
-            cargo = null;
-        }
+        super.moveTo(newLocation);
     }
 
     @Override
     public void loadCargo(String cargo) {
-        this.cargo = cargo;
+        super.loadCargo(cargo);
     }
 
     @Override

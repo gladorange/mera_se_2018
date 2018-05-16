@@ -10,7 +10,8 @@ public class Yacht extends Ship {
 
     @Override
     public void moveTo(String newLocation) {
-        System.out.println(String.format("Яхта. Плыву из %s в %s", currentLocation, newLocation));
-        currentLocation = newLocation;
+        super.moveTo(newLocation);
+        /*System.out.println(String.format("Яхта. Плыву из %s в %s", currentLocation, newLocation));
+        currentLocation = newLocation;*/
     }
 }

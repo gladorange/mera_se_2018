@@ -9,4 +9,10 @@ public abstract class Ship implements Vehicle {
     public Ship(String currentLocation) {
         this.currentLocation = currentLocation;
     }
+
+    @Override
+    public void moveTo(String newLocation) {
+        System.out.println(String.format("Яхта. Плыву из %s в %s", currentLocation, newLocation));
+        currentLocation = newLocation;
+    }
 }
