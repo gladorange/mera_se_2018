@@ -1,10 +1,11 @@
 package terletskiy.task1;
 
-import java.util.HashSet;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class task1 {
     public static void main(String[] args) {
         try {
+            int transactionId = ThreadLocalRandom.current().nextInt(8999);
             //Создайте свое предприятияе,
             CompanyList company = new CompanyList();
             //несколько сотрудников с менеджерами,

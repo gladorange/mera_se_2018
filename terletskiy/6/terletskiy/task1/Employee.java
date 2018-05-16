@@ -3,19 +3,16 @@ import java.util.regex.Pattern;
 
 
 public class Employee {
-    private final String fam;
-    private final String imya;
-    private final String otche;
-    private Manager manager;
+    protected final String fam;
+    protected final String imya;
+    protected final String otche;
 
     @Override
     public String toString() {
         return "Employee{" +
                 "fam='" + fam + '\'' +
                 ", imya='" + imya + '\'' +
-                ", otche='" + otche + '\'' +
-                ", manager=" + manager +
-                '}';
+                ", otche='" + otche + '\'';
     }
 
     public Employee(String fam, String imya, String otche) {
@@ -23,7 +20,6 @@ public class Employee {
         this.fam = fam;
         this.imya = imya;
         this.otche = otche;
-        this.manager = null;
     }
 
     // символы, отличные от кириллицы - должно выкинуться исключение.
@@ -37,9 +33,5 @@ public class Employee {
 
     public Employee(String fam, String imya, String otche, Manager manager) {
         this(fam,imya, otche);
-        this.manager = manager;
-    }
-    public Manager getManager(){
-        return manager;
     }
 }
