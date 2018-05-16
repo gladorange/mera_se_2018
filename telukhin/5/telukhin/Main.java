@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Vehicle> vechicles = new ArrayList<>();
 
+        ArrayList<Vehicle> vechicles = new ArrayList<>();
         vechicles.add(new Motorbike("Самара"));
         vechicles.add(new Truck("Ростов"));
         vechicles.add(new Yacht("Владимир"));
