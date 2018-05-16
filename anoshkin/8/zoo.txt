@@ -1,0 +1,8 @@
+Cat Barsik 4
+Cat Vasya 7
+Dog Barbos 14
+Zebra Marty 42
+Cat Barsik2 8
+Cat Vasya2 9
+Dog Barbos2 4
+Zebra Marty2 3
