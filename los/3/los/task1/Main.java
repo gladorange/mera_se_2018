@@ -4,18 +4,18 @@ public class Main
 {
 	public static void main(String[] args) 
 	{
-		Author Dennis = new Author("Dennis", "Ritchie", 1941, "USA");
-		Dennis.addBook("C programming language", 1978, 534);
-		Author Herbert = new Author("Herbert", "Schildt", 1951, "USA");
-		Herbert.addBook("Java: The Complete Reference", 2012, 1102);
-		Author Bjarne = new Author("Bjarne", "Stroustrup", 1950, "Denmark");
-		Bjarne.addBook("A Tour of C++", 2013, 190);
-		Bjarne.addBook("The C++ Programming Language", 1991, 696);
+		Author dennis = new Author("Dennis", "Ritchie", 1941, "USA");
+		dennis.addBook("C programming language", 1978, 534);
+		Author herbert = new Author("Herbert", "Schildt", 1951, "USA");
+		herbert.addBook("Java: The Complete Reference", 2012, 1102);
+		Author bjarne = new Author("Bjarne", "Stroustrup", 1950, "Denmark");
+		bjarne.addBook("A Tour of C++", 2013, 190);
+		bjarne.addBook("The C++ Programming Language", 1991, 696);
 		
-        Dennis.printNumberPagesOneAuthor(); 	
-		Herbert.printNumberPagesOneAuthor();
-        Bjarne.printNumberPagesOneAuthor();		
+        dennis.printNumberPagesOneAuthor();
+		herbert.printNumberPagesOneAuthor();
+        bjarne.printNumberPagesOneAuthor();
 		
-		Dennis.printNumberPagesAllAuthors();
+		dennis.printNumberPagesAllAuthors();
 	}
 }

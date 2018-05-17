@@ -4,17 +4,17 @@ public class Person
 {
   private String name;
   private String surname;
-  private int year_birthday;
+  private int yearBirthday;
   private String country;
-  private static long counter_objects_class = 0;
+  private static long counterObjectsClass = 0;
   
-  public Person(String name, String surname, int year_birthday, String country)
+  public Person(String name, String surname, int yearBirthday, String country)
   {
 	  this.name = name;
 	  this.surname = surname;
-	  this.year_birthday = year_birthday;
+	  this.yearBirthday = yearBirthday;
 	  this.country = country;
-	  counter_objects_class ++;
+	  counterObjectsClass ++;
   }
   
   public String getName()
@@ -35,11 +35,11 @@ public class Person
   }
   public int getYearBirthday()
   {
-	  return this.year_birthday;
+	  return this.yearBirthday;
   }
-  public void setYearBirthday(int year_birthday)
+  public void setYearBirthday(int yearBirthday)
   {
-	  this.year_birthday = year_birthday;
+	  this.yearBirthday = yearBirthday;
   }
   public String getCountry()
   {
@@ -51,6 +51,6 @@ public class Person
   }
   public long getCounterObjectsClass()
   {
-	  return this.counter_objects_class;
+	  return this.counterObjectsClass;
   }
 }

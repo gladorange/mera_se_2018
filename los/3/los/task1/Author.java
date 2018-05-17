@@ -4,43 +4,48 @@ import java.util.ArrayList;
 
 public class Author extends Person
 {
-	private ArrayList<Book> written_books = new ArrayList<Book>();
-
-    public Author(String name, String surname, int year_birthday, String country)
-	{
-		super(name, surname, year_birthday, country);
-	}
-
-	public ArrayList<Book> getBooks()
+    private ArrayList<Book> writtenBooks = new ArrayList<Book>();
+    public Author(String name, String surname, int yearBirthday, String country)
     {
-        return written_books;
+        super(name, surname, yearBirthday, country);
     }
 
-    public void addBook(String title, int year_publication, long quantity_pages)
+	public Book getBooks(int i)
     {
-        Book book = new Book (title, year_publication, quantity_pages, this);
-        this.written_books.add(book);
+            return writtenBooks.get(i);
+    }
+
+    public void addBook(String title, int yearPublication, long quantityPages)
+    {
+        Book book = new Book (title, yearPublication, quantityPages, this);
+        this.writtenBooks.add(book);
     }
 
     public void printNumberPagesOneAuthor()
     {
-        long quantity_pages_all_books_one_author = 0;
+        long quantityPagesAllBooksOneAuthor = 0;
 
-        for (Book b : written_books)
+        for (Book b : writtenBooks)
         {
-            quantity_pages_all_books_one_author += b.getQuantity_pages();
+            quantityPagesAllBooksOneAuthor += b.getQuantityPages();
         }
 
-        System.out.println("Total number pages for all books of author " +
-                    this.getName() +
-                    " " +
-                    this.getSurname() +
-                    " :" +
-                    quantity_pages_all_books_one_author);
+        System.out.format("Total number pages for all books of author %s %s : %d \n",
+                    this.getName(),
+                    this.getSurname(),
+                    quantityPagesAllBooksOneAuthor);
     }
 
     public void printNumberPagesAllAuthors() {
-        System.out.println("Total number pages for all books of all authors: " + this.written_books.get(0).getQuantity_pages_all_books());
+        if(!this.writtenBooks.isEmpty())
+        {
+            System.out.println("Total number pages for all books of all authors: " + this.writtenBooks.get(0).getQuantityPagesAllBooks());
+        }
+        else
+        {
+            System.out.println("List of number pages is empty");
+        }
+
     }
 }
 
