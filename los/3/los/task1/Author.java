@@ -4,12 +4,11 @@ import java.util.ArrayList;
 
 public class Author extends Person
 {
-	private ArrayList<Book> writtenBooks = new ArrayList<Book>();
-
+    private ArrayList<Book> writtenBooks = new ArrayList<Book>();
     public Author(String name, String surname, int yearBirthday, String country)
-	{
-		super(name, surname, yearBirthday, country);
-	}
+    {
+        super(name, surname, yearBirthday, country);
+    }
 
 	public Book getBooks(int i)
     {
