@@ -6,4 +6,8 @@ public class ExceptionNullManager extends Exception {
     public ExceptionNullManager(String info) {
         this.info = info;
     }
+
+    public String getInfo() {
+        return info;
+    }
 }
