@@ -17,19 +17,26 @@ public class MainTask6 {
         try {
             Manager mikhail = new Manager("Михаил", "Иванов", "Economics");
             Manager sergey = new Manager("Сергей", "Петров", "Economics");
-//            Manager viktor = new Manager("Виктор", "Sidorov", "Economics");
             Manager viktor = new Manager("Виктор", "Сидоров", "Economics");
+
+            /*Сотрудник с неправильной фамилией*/
+            //Manager viktor = new Manager("Виктор", "Sidorov", "Economics");
 
             Worker fedor = new Worker("Федор", "Двинятин", mikhail);
             Worker ivan = new Worker("Иван", "Фролов", sergey);
-            Worker roman = new Worker("Роман","Гофман");
-//            Worker roman = new Worker("Роман", "Гофман", viktor);
+            Worker roman = new Worker("Роман", "Гофман", viktor);
+
+            /*Сотрудник без менеджера*/
+            //Worker roman = new Worker("Роман", "Гофман");
 
             listForFactoryPersonal.add(mikhail);
             listForFactoryPersonal.add(sergey);
             listForFactoryPersonal.add(viktor);
             listForFactoryPersonal.add(fedor);
-//            listForFactoryPersonal.add(fedor);
+
+            /*Сотрудник дублированный*/
+            //listForFactoryPersonal.add(fedor);
+
             listForFactoryPersonal.add(ivan);
             listForFactoryPersonal.add(roman);
 

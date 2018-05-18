@@ -7,14 +7,12 @@ public class Factory {
 
     private HashSet<Emploee> workingPeople;
 
-
-    public Factory(ArrayList<Emploee> listPersonal, HashSet workingPeople) throws ExceptionAlreadyExist {
+    public Factory(ArrayList<Emploee> listPersonal, HashSet<Emploee> workingPeople) throws ExceptionAlreadyExist {
         this.workingPeople = workingPeople;
         chaeckAddEmploees(listPersonal, workingPeople);
     }
 
-    private static void chaeckAddEmploees(ArrayList<Emploee> listPersonal, HashSet workers) throws ExceptionAlreadyExist {
-        System.out.println("Добавляем сотрудников фабрики.");
+    private static void chaeckAddEmploees(ArrayList<Emploee> listPersonal, HashSet<Emploee> workers) throws ExceptionAlreadyExist {
         for (Emploee e : listPersonal) {
             if (workers.contains(e)) {
                 throw new ExceptionAlreadyExist(String.format("Такой работник (%s) уже есть в компании", e.getName()));
