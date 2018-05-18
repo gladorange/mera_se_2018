@@ -1,18 +1,33 @@
 package telukhin.task1;
 
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 public class Factory {
 
-    private Set workingPeople = new HashSet<Emploee>();
+    private HashSet<Emploee> workingPeople;
 
-    public Factory(Set workingPeople) {
+
+    public Factory(ArrayList<Emploee> listPersonal, HashSet workingPeople) throws ExceptionAlreadyExist {
         this.workingPeople = workingPeople;
-        Iterator iterator = workingPeople.iterator();
-        while (iterator.hasNext()){
+        chaeckAddEmploees(listPersonal, workingPeople);
+    }
 
+    private static void chaeckAddEmploees(ArrayList<Emploee> listPersonal, HashSet workers) throws ExceptionAlreadyExist {
+        System.out.println("Добавляем сотрудников фабрики.");
+        for (Emploee e : listPersonal) {
+            if (workers.contains(e)) {
+                throw new ExceptionAlreadyExist(String.format("Такой работник (%s) уже есть в компании", e.getName()));
+            } else {
+                workers.add(e);
+            }
         }
+    }
+
+    public void printPersonal() {
+        for (Emploee e : workingPeople) {
+            System.out.println(e.getName());
+        }
+        System.out.println(String.format("Количество сотрудников фабрики %s", workingPeople.size()));
     }
 }

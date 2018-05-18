@@ -8,12 +8,6 @@ public class Manager extends Emploee {
 
     public Manager(String name, String surname, String department) throws ExceptionWrongSurname {
         super(name, surname);
-        CharSequence source = surname;
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+$");
-        Matcher matcher = pattern.matcher(source);
-        if (matcher.matches()){
-            throw new ExceptionWrongSurname("Только по РУССКИЕ буквы в фамили! \nНеверная фамилия у " + name);
-        }
         this.department = department;
     }
 }

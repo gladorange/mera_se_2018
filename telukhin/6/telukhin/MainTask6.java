@@ -9,20 +9,29 @@ import java.util.Set;
 public class MainTask6 {
     public static void main(String[] args) {
 
-        Manager mikhail = null;
-        Manager sergey = null;
-        Worker fedor = null;
-        Worker ivan = null;
 
-        ArrayList<Emploee> listWorkers = new ArrayList<>();
+        ArrayList<Emploee> listForFactoryPersonal = new ArrayList<>();
+        HashSet<Emploee> factoryPersonal = new HashSet<>();
+
+
         try {
-            mikhail = new Manager("Михаил", "Иванов", "Economics");
-            sergey = new Manager("Сергей", "Петров", "Economics");
-//            Manager Viktor = new Manager("Виктор", "Sidorov", "Economics");
+            Manager mikhail = new Manager("Михаил", "Иванов", "Economics");
+            Manager sergey = new Manager("Сергей", "Петров", "Economics");
+//            Manager viktor = new Manager("Виктор", "Sidorov", "Economics");
+            Manager viktor = new Manager("Виктор", "Сидоров", "Economics");
 
-            fedor = new Worker("Федор", "Двинятин", mikhail);
-            ivan = new Worker("Иван", "Фролов", sergey);
-//            Worker Roman = new Worker("Роман","Гофман");
+            Worker fedor = new Worker("Федор", "Двинятин", mikhail);
+            Worker ivan = new Worker("Иван", "Фролов", sergey);
+            Worker roman = new Worker("Роман","Гофман");
+//            Worker roman = new Worker("Роман", "Гофман", viktor);
+
+            listForFactoryPersonal.add(mikhail);
+            listForFactoryPersonal.add(sergey);
+            listForFactoryPersonal.add(viktor);
+            listForFactoryPersonal.add(fedor);
+//            listForFactoryPersonal.add(fedor);
+            listForFactoryPersonal.add(ivan);
+            listForFactoryPersonal.add(roman);
 
         } catch (ExceptionWrongSurname e) {
             System.out.println(e.getInfo());
@@ -30,28 +39,13 @@ public class MainTask6 {
             System.out.println(e.getInfo());
         }
 
-        listWorkers.add(mikhail);
-        listWorkers.add(sergey);
-        listWorkers.add(fedor);
-        listWorkers.add(ivan);
-
-
-        Set workers = new HashSet<Emploee>();
-        for (Emploee e : listWorkers) {
-            workers.add(e);
-            if(workers.contains(e)){
-                throw new ExceptionAlreadyExist(String.format("Такой работник (%s) уже есть в компании", e.getName()));
-            }
+        try {
+            Factory factory = new Factory(listForFactoryPersonal, factoryPersonal);
+            factory.printPersonal();
+        } catch (ExceptionAlreadyExist exceptionAlreadyExist) {
+            System.out.println(exceptionAlreadyExist.getInfo());
         }
-
-
-        workers.add(mikhail);
-        workers.add(sergey);
-        workers.add(fedor);
-        workers.add(ivan);
-
-        Factory factory = new Factory(workers);
-
-
     }
+
+
 }
