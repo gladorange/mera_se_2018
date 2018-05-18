@@ -1,6 +1,5 @@
 package telukhin.task1;
 
-import telukhin.task1.Author;
 
 public class Book {
 
