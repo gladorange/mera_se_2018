@@ -1,5 +1,8 @@
 package rybkin.task3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Person {
     private String firstName = "none";
     private String secondName = "none";
@@ -7,8 +10,18 @@ public class Person {
     private String country = "none";
     static int personCount;
 
+    public List<String> fruits = new ArrayList<>();
+
     public Person () {
         personCount++;
+
+        if (Math.random() * 100 < 50) {
+            fruits.add("Яблоко");
+        } else {
+            fruits.add("Апельсины");
+            fruits.add("Груши");
+        }
+
     }
 
     public static int getPersonCount() {
@@ -16,6 +29,7 @@ public class Person {
     }
 
     public Person(String firstName, String secondName, Integer yearOfBirth, String country) {
+        this();
         this.firstName = firstName;
         this.secondName = secondName;
         this.yearOfBirth = yearOfBirth;
@@ -53,5 +67,10 @@ public class Person {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "firstName='" + firstName + '\'' + ", yearOfBirth=" + yearOfBirth + '}';
     }
 }
