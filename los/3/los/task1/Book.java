@@ -3,31 +3,31 @@ package los.task1;
 public class Book
 {
 	private String title;
-	private int year_publication;
+	private int yearPublication;
 	private Author author;
-	private long quantity_pages;
-	private static long quantity_pages_all_books = 0;
+	private long quantityPages;
+	private static long quantityPagesAllBooks = 0;
 
-	public Book(String title, int year_publication, long quantity_pages, Author author)
+	public Book(String title, int yearPublication, long quantityPages, Author author)
 	{
 		this.title = title; 
-		this.year_publication = year_publication;
-		this.quantity_pages = quantity_pages;
+		this.yearPublication = yearPublication;
+		this.quantityPages = quantityPages;
 		this.author = author;
-		quantity_pages_all_books += quantity_pages;
+		quantityPagesAllBooks += quantityPages;
 	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public int getYear_publication() {
-		return year_publication;
+	public int getYearPublication() {
+		return yearPublication;
 	}
 
-	public long getQuantity_pages()
+	public long getQuantityPages()
 	{
-		return quantity_pages;
+		return quantityPages;
 	}
 
 	public Author getAuthor() {
@@ -38,20 +38,20 @@ public class Book
 		this.title = title;
 	}
 
-	public void setYear_publication(int year_publication) {
-		this.year_publication = year_publication;
+	public void setYearPublication(int yearPublication) {
+		this.yearPublication = yearPublication;
 	}
 
 	public void setAuthor(Author author) {
 		this.author = author;
 	}
 
-	public void setQuantity_pages(long quantity_pages) {
-		this.quantity_pages = quantity_pages;
+	public void setQuantityPages(long quantityPages) {
+		this.quantityPages = quantityPages;
 	}
 
-	public static long getQuantity_pages_all_books() {
-		return quantity_pages_all_books;
+	public static long getQuantityPagesAllBooks() {
+		return quantityPagesAllBooks;
 	}
 }
 
