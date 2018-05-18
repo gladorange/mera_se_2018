@@ -14,7 +14,7 @@ public class Emploee {
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+$");
         Matcher matcher = pattern.matcher(source);
         if (matcher.matches()){
-            throw new ExceptionWrongSurname("Только по РУССКИЕ буквы в фамили! \nНеверная фамилия у " + name);
+            throw new ExceptionWrongSurname("Только по РУССКИЕ буквы в фамилии! \nНеверная фамилия у " + name);
         }
     }
 

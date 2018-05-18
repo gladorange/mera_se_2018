@@ -35,7 +35,7 @@ public class MainTask6 {
             listForFactoryPersonal.add(fedor);
 
             /*Сотрудник дублированный*/
-            //listForFactoryPersonal.add(fedor);
+//            listForFactoryPersonal.add(fedor);
 
             listForFactoryPersonal.add(ivan);
             listForFactoryPersonal.add(roman);
