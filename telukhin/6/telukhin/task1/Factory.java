@@ -7,6 +7,7 @@ public class Factory {
 
     private HashSet<Emploee> workingPeople;
 
+
     public Factory(ArrayList<Emploee> listPersonal, HashSet<Emploee> workingPeople) throws ExceptionAlreadyExist {
         this.workingPeople = workingPeople;
         chaeckAddEmploees(listPersonal, workingPeople);
