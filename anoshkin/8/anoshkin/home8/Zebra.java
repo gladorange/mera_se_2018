@@ -2,8 +2,7 @@ package anoshkin.home8;
 
 import anoshkin.home9.AnimalHeader;
 
-@AnimalHeader(typeName = "ZEBRA",
-              description = "Я зебра и у меня много полосок",
+@AnimalHeader(description = "Я зебра и у меня много полосок",
               parameterField = "полосок")
 public class Zebra extends Animal {
     private Integer stripes = 0;

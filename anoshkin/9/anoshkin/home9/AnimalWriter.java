@@ -20,7 +20,7 @@ public abstract class  AnimalWriter <ANIMAL> {
             String nameField = "Name";
             String valueField = "Value";
             if(ah != null){
-                outString += ah.typeField() + ": \"" + ah.typeName() + "\",\n";
+                outString += ah.typeField() + ": \"" + animal.getClass().getSimpleName() + "\",\n";
                 outString += ah.descriptionField() + ": \"" + ah.description() + "\",\n";
                 nameField = ah.nameField();
                 valueField = ah.parameterField();

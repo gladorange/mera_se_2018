@@ -3,8 +3,7 @@ package anoshkin.home8;
 
 import anoshkin.home9.AnimalHeader;
 
-@AnimalHeader(typeName = "CAT",
-              description = "Кошка бывает кусачей только от жизни кошачьей",
+@AnimalHeader(description = "Кошка бывает кусачей только от жизни кошачьей",
               parameterField = "длинаУсов")
 public class Cat extends Animal {
     private Integer length = 0;

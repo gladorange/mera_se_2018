@@ -1,5 +1,5 @@
 {
-animal: "ZEBRA",
+animal: "Zebra",
 description: "Я зебра и у меня много полосок",
 list:[
 	{name:"Martin",полосок:"55"}

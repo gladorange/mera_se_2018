@@ -1,5 +1,5 @@
 {
-animal: "DOG",
+animal: "Dog",
 description: "Собака бывает кусачей только от жизни собачей",
 list:[
 	{name:"Sharik",громкость:"7"},

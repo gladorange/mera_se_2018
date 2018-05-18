@@ -1,5 +1,5 @@
 {
-animal: "CAT",
+animal: "Cat",
 description: "Кошка бывает кусачей только от жизни кошачьей",
 list:[
 	{name:"Barsik",длинаУсов:"15"},

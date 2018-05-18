@@ -9,7 +9,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AnimalHeader {
     String typeField() default "animal";
-    String typeName();
     String descriptionField() default "description";
     String description();
     String nameField() default "name";
