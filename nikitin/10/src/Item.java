@@ -1,9 +1,7 @@
 package src;
 
-import java.util.Objects;
-
 interface Sellable {
-    public boolean sell(int count);
+    boolean sell(int count);
 
 }
 
@@ -37,10 +35,10 @@ public class Item implements Sellable {
 
 
     @Override
-    public boolean sell(int count) {
-        if (this.count < count) {
+    public boolean sell(int toSell) {
+        if (this.count < toSell) {
             System.out.println(
-                    String.format("Not enough items to sell[requested %d, remained %d]", count, this.count));
+                    String.format("Not enough items to sell[requested %d, remained %d]", toSell, this.count));
             return false;
         }
         this.count -= count;
