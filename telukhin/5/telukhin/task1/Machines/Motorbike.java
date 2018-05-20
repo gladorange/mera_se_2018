@@ -1,6 +1,5 @@
 package telukhin.task1.Machines;
 
-import telukhin.task1.Abstract.Car;
 import telukhin.task1.Interfaces.Vehicle;
 
 public class Motorbike implements Vehicle {
