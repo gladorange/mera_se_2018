@@ -1,5 +1,9 @@
 package anoshkin.home8;
 
+import anoshkin.home9.AnimalHeader;
+
+@AnimalHeader(description = "Я зебра и у меня много полосок",
+              parameterField = "полосок")
 public class Zebra extends Animal {
     private Integer stripes = 0;
 
@@ -15,5 +19,9 @@ public class Zebra extends Animal {
         } else {
             System.out.println("Тпрууу");
         }
+    }
+
+    public Integer getStripes(){
+        return stripes;
     }
 }
