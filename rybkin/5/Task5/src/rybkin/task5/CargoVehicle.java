@@ -1,4 +1,6 @@
 package rybkin.task5;
 
-public class CargoVehicle {
+public interface CargoVehicle extends Vehicle {
+    boolean loadCargo(String cargo);
+    Integer getMaxWeight();
 }

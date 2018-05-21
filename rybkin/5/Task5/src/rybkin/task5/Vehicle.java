@@ -1,4 +1,5 @@
 package rybkin.task5;
 
-public class Vehicle {
+public interface Vehicle {
+    boolean moveTo (String newLocation);
 }
