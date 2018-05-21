@@ -1,5 +1,9 @@
 package anoshkin.home8;
 
+import anoshkin.home9.AnimalHeader;
+
+@AnimalHeader(description = "Собака бывает кусачей только от жизни собачей",
+              parameterField = "громкость")
 public class Dog extends Animal {
     private Integer loud = 0;
 
@@ -15,5 +19,9 @@ public class Dog extends Animal {
         } else {
             System.out.println("Гав");
         }
+    }
+
+    public Integer getLoud(){
+        return loud;
     }
 }

@@ -32,6 +32,7 @@ public class Artist extends Person {
         this.style = style;
     }
 
+
     public void printInfo(){
         System.out.println(String.format(
                 "%s %s, родился в %d году. Основной стиль рисования: %s",

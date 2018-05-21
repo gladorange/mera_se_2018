@@ -1,0 +1,4 @@
+Cat Barsik 4
+Cat Vasya 7
+Dog Barbos load
+Zebra Marty 42

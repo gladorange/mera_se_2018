@@ -1,9 +1,8 @@
 package telukhin.task1.Machines;
 
 import telukhin.task1.Abstract.CargoShip;
-import telukhin.task1.Interfaces.CargoVehicle;
 
-public class Barge extends CargoShip{
+public class Barge extends CargoShip {
 
 
     public Barge(String currentLocation) {
