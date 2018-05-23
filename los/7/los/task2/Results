@@ -1,0 +1,77 @@
+************************************************************************************************
+Results:
+================================================================================================
+Time measurement for adding 900000 doubles to collections:
+ArrayList and LinkedList - the fastest types
+TreeSet - the slowest type
+================================================================================================
+Time measurement for getting the last element of ArrayList and finding it in all collections:
+HashSet - the fastest type
+ArrayList and LinkedList - the slowest type
+================================================================================================
+Time measurement for getting the first element of ArrayList and finding it in all collections:
+HashSet - the fastest type
+ArrayList and TreeSet - the slowest type
+
+************************************************************************************************
+First launch:
+------------------------------------------------------------------------------------------------
+Time measurement for adding 900000 doubles to collections:
+ ArrayList:  0.0194108870 seconds
+ LinkedList: 0.0295606460 seconds
+ HashSet:    0.0930710640 seconds
+ TreeSet:    0.2314016820 seconds
+
+Time measurement for getting the last element of ArrayList and finding it in all collections:
+ ArrayList:  0.0112304070 seconds
+ LinkedList: 0.0146304090 seconds
+ HashSet:    0.0000192000 seconds
+ TreeSet:    0.0000316800 seconds
+
+Time measurement for getting the first element of ArrayList and finding it in all collections:
+ ArrayList:  0.0000105600 seconds
+ LinkedList: 0.0000041600 seconds
+ HashSet:    0.0000016000 seconds
+ TreeSet:    0.0000332800 seconds
+
+************************************************************************************************
+ Second launch:
+------------------------------------------------------------------------------------------------
+Time measurement for adding 900000 doubles to collections:
+ ArrayList:  0.0206390940 seconds
+ LinkedList: 0.0173030660 seconds
+ HashSet:    0.1498844400 seconds
+ TreeSet:    0.2296690610 seconds
+
+Time measurement for getting the last element of ArrayList and finding it in all collections:
+ ArrayList:  0.0146297700 seconds
+ LinkedList: 0.0141446490 seconds
+ HashSet:    0.0000192000 seconds
+ TreeSet:    0.0000364800 seconds
+
+Time measurement for getting the first element of ArrayList and finding it in all collections:
+ ArrayList:  0.0000121600 seconds
+ LinkedList: 0.0000048000 seconds
+ HashSet:    0.0000019200 seconds
+ TreeSet:    0.0000073600 seconds
+
+************************************************************************************************
+ Third launch:
+------------------------------------------------------------------------------------------------
+Time measurement for adding 900000 doubles to collections:
+ ArrayList:  0.0196093370 seconds
+ LinkedList: 0.0175843860 seconds
+ HashSet:    0.0972152990 seconds
+ TreeSet:    0.2270071550 seconds
+
+Time measurement for getting the last element of ArrayList and finding it in all collections:
+ ArrayList:  0.0125136080 seconds
+ LinkedList: 0.0145401690 seconds
+ HashSet:    0.0000198400 seconds
+ TreeSet:    0.0000483190 seconds
+
+Time measurement for getting the first element of ArrayList and finding it in all collections:
+ ArrayList:  0.0000089600 seconds
+ LinkedList: 0.0000044800 seconds
+ HashSet:    0.0000019200 seconds
+ TreeSet:    0.0000070400 seconds
