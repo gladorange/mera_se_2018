@@ -17,18 +17,25 @@ public class AnimalReader {
         try (BufferedReader in = new BufferedReader(new FileReader(readFilePath))) {
             for (String textLine; (textLine = in.readLine()) != null; ) {
                 String[] arr = textLine.split(" ");
-                if (arr[0].equals("Cat")) {
-                    Cat cat = new Cat(arr[1], Integer.parseInt(arr[2]));
-                    listAnimals.add(cat);
-                    listCats.add(cat);
-                } else if (arr[0].equals("Dog")) {
-                    Dog dog = new Dog(arr[1], Integer.parseInt(arr[2]));
-                    listAnimals.add(dog);
-                    listDogs.add(dog);
-                } else if (arr[0].equals("Zebra")) {
-                    Zebra zebra = new Zebra(arr[1], Integer.parseInt(arr[2]));
-                    listAnimals.add(zebra);
-                    listZebras.add(zebra);
+                String classAnimal = arr[0];
+                switch (classAnimal) {
+                    case "Cat":
+                        Cat cat = new Cat(arr[1], Integer.parseInt(arr[2]));
+                        listAnimals.add(cat);
+                        listCats.add(cat);
+                        break;
+                    case "Dog":
+                        Dog dog = new Dog(arr[1], Integer.parseInt(arr[2]));
+                        listAnimals.add(dog);
+                        listDogs.add(dog);
+                        break;
+                    case "Zebra":
+                        Zebra zebra = new Zebra(arr[1], Integer.parseInt(arr[2]));
+                        listAnimals.add(zebra);
+                        listZebras.add(zebra);
+                        break;
+                    default:
+                        System.out.println(classAnimal + " Такого животног в классе нет");
                 }
             }
         } catch (IOException e) {
