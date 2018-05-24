@@ -1,0 +1,12 @@
+Cat,Vasya,2
+Cat,Barsik,6
+Cat,Tishka,9
+Cat,Boris,3
+Dog,Barbos,1
+Dog,Baxter,12
+Dog,Hatiko,5
+Dog,Black,8
+Zebra,Marty,20
+Zebra,Strips,100
+Zebra,Agafia,50
+Zebra,Agrippina,112
