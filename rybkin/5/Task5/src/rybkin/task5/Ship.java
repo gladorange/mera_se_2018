@@ -9,4 +9,4 @@ public abstract class Ship  implements Vehicle{
         this.location = newLocation;
         return true;
     }
-}
+    }

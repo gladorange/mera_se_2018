@@ -1,6 +1,6 @@
 package rybkin.task5;
 
-public abstract class Truck extends CargoCar implements CargoVehicle{
+public class Truck extends CargoCar implements CargoVehicle{
     protected String location = "baza";
     protected String cargo = "кирпичи";
 
@@ -13,5 +13,19 @@ public abstract class Truck extends CargoCar implements CargoVehicle{
             this.location = newLocation;
         }
         return result;
+    }
+
+    Truck(String location){
+        this.location=location;
+    }
+
+    @Override
+    public boolean loadCargo(String cargo) {
+        return false;
+    }
+
+    @Override
+    public Integer getMaxWeight() {
+        return null;
     }
 }
