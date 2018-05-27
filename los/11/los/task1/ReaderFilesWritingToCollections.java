@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
+
 public class ReaderFilesWritingToCollections {
     private BufferedReader inputReader;
     Collection<String> stringArrayList;
