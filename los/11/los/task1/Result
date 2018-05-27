@@ -1,0 +1,32 @@
+Results:
+Asynchronous reading from files slower in ~5 times than Synchronous reading.
+But if we change blocks of code and run Asynchronous reading firstly then
+Asynchronous reading is faster in ~5 times.
+So, it depends from launch in the code.
+
+********************************************************************
+Synchronous reading from files:
+Total time of reading from 3 files and writing to collection: 388212676
+Sum number of lines in all files: 3000003
+
+Asynchronous reading from files:
+Total time of reading from 3 files and writing to collection: 2052969263
+Sum number of lines in all files: 3000003
+
+********************************************************************
+Synchronous reading from files:
+Total time of reading from 3 files and writing to collection: 370762761
+Sum number of lines in all files: 3000003
+
+Asynchronous reading from files:
+Total time of reading from 3 files and writing to collection: 2227731447
+Sum number of lines in all files: 3000003
+
+********************************************************************
+Synchronous reading from files:
+Total time of reading from 3 files and writing to collection: 335345493
+Sum number of lines in all files: 3000003
+
+Asynchronous reading from files:
+Total time of reading from 3 files and writing to collection: 2156799310
+Sum number of lines in all files: 3000003

@@ -1,5 +1,6 @@
 package los.task1;
 
+
 public class ReaderFilesWritingToCollectionsThreads extends Thread
 {
     ReaderFilesWritingToCollections readerFiles;
